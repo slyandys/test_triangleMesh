@@ -1192,7 +1192,7 @@ bool MeshSimplification::leadsSelfIntersection(g_PEdge * halfEdge)
 #ifdef USE_MOELLER
 			if ( !NoDivTriTriIsect(a, b, c, d, e, f))
 #else
-			  tetgenmesh::interresult inter = tetmesh->tri_tri_inter(a, b, c, d, e, f);
+			  tetgenmesh::interresult inter = static_cast<tetgenmesh::interresult>(tetmesh->tri_tri_inter(a, b, c, d, e, f));
 			  // if(inter == tetgenmesh::interresult::INTERSECT)
 			  // JL: Does VC++ need the enum in-between?
 			if(inter == tetgenmesh::INTERSECT)
