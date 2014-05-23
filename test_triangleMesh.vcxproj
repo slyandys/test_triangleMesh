@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7480B235-B006-4F6E-AD58-C1687F6D124D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\Libs\TriangleMesh;..\..\Libs\GeomLib;..\..\Libs\glui_v2_2;..\..\Libs\CLAPACK\includes;..\..\Libs\canonicalForm;..\..\Libs\ann_1.1.1\include\;..\..\Libs\tetgen1.4.3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>TriangleMesh.lib;geomlib.lib;glui32.lib;clapack.lib;canForm.lib;ANN.lib;tetgen.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)test_triangleMesh.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\Libs\GeomLib\Debug;..\..\Libs\glui_v2_2\msvc\lib;..\..\Libs\CLAPACK\lib;..\..\Libs\TriangleMesh\Debug;..\..\Libs\canonicalForm\Debug;C:\Stefanie\Libs\ann_1.1.1\MS_Win32\dll\Release;..\..\Libs\tetgen1.4.3\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBC;MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)test_triangleMesh.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\thirdparty\clapack-3.2.1-CMAKE\INCLUDE;C:\thirdparty\InsightToolkit-3.16.0\binaries;C:\thirdparty\InsightToolkit-3.16.0\Code\Algorithms;C:\thirdparty\InsightToolkit-3.16.0\Code\BasicFilters;C:\thirdparty\InsightToolkit-3.16.0\Code\Common;C:\thirdparty\InsightToolkit-3.16.0\Code\Numerics;C:\thirdparty\InsightToolkit-3.16.0\Code\IO;C:\thirdparty\InsightToolkit-3.16.0\Code\Numerics\FEM;C:\thirdparty\InsightToolkit-3.16.0\Code\Numerics\NeuralNetworks;C:\thirdparty\InsightToolkit-3.16.0\Code\SpatialObject;C:\thirdparty\InsightToolkit-3.16.0\Utilities\MetaIO;C:\thirdparty\InsightToolkit-3.16.0\Utilities\NrrdIO;C:\thirdparty\InsightToolkit-3.16.0\binaries\Utilities\NrrdIO;C:\thirdparty\InsightToolkit-3.16.0\Utilities\DICOMParser;C:\thirdparty\InsightToolkit-3.16.0\binaries\Utilities\DICOMParser;C:\thirdparty\InsightToolkit-3.16.0\binaries\Utilities\expat;C:\thirdparty\InsightToolkit-3.16.0\Utilities\expat;C:\thirdparty\InsightToolkit-3.16.0\Utilities\nifti\niftilib;C:\thirdparty\InsightToolkit-3.16.0\Utilities\nifti\znzlib;C:\thirdparty\InsightToolkit-3.16.0\Utilities\itkExtHdrs;C:\thirdparty\InsightToolkit-3.16.0\binaries\Utilities;C:\thirdparty\InsightToolkit-3.16.0\Utilities;C:\thirdparty\InsightToolkit-3.16.0\Code\Numerics\Statistics;C:\thirdparty\InsightToolkit-3.16.0\Utilities\vxl\v3p\netlib;C:\thirdparty\InsightToolkit-3.16.0\Utilities\vxl\vcl;C:\thirdparty\InsightToolkit-3.16.0\Utilities\vxl\core;C:\thirdparty\InsightToolkit-3.16.0\binaries\Utilities\vxl\v3p\netlib;C:\thirdparty\InsightToolkit-3.16.0\binaries\Utilities\vxl\vcl;C:\thirdparty\InsightToolkit-3.16.0\binaries\Utilities\vxl\core;C:\thirdparty\InsightToolkit-3.16.0\binaries\Utilities\gdcm;C:\thirdparty\InsightToolkit-3.16.0\Utilities\gdcm\src;C:\src\cpp\libTriangleMesh;..\..\Libs\GeomLib;..\..\Libs\ann_1.1.1\include;..\..\Libs\tetgen1.4.3;G:\source code\wrapper;G:\Program Files (x86)\OpenMesh 3.1\include;G:\Lib\ann_1.1.2\include;G:\source code\wrapper\geodesic;G:\librariesSource\tetgen1.5.0;C:\Program Files\ITK\include\ITK-4.5;C:\Program Files\CLAPACK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;ITKAlgorithms.lib;ITKStatistics.lib;ITKFEM.lib;C:\thirdparty\clapack-3.2.1-CMAKE\binaries_64\SRC\release\lapack.lib;C:\thirdparty\clapack-3.2.1-CMAKE\binaries_64\BLAS\SRC\release\blas.lib;C:\thirdparty\clapack-3.2.1-CMAKE\binaries_64\F2CLIBS\libf2c\release\libf2c.lib;itkNetlibSlatec.lib;ITKNumerics.lib;ITKBasicFilters.lib;ITKIO.lib;ITKNrrdIO.lib;itkgdcm.lib;itkjpeg12.lib;itkjpeg16.lib;itkopenjpeg.lib;snmpapi.lib;rpcrt4.lib;itkpng.lib;itktiff.lib;itkjpeg8.lib;ITKSpatialObject.lib;ITKCommon.lib;itkvnl_inst.lib;itkvnl_algo.lib;itkv3p_netlib.lib;itkvnl.lib;itkvcl.lib;ITKMetaIO.lib;itksys.lib;ws2_32.lib;comctl32.lib;wsock32.lib;ITKDICOMParser.lib;ITKEXPAT.lib;ITKniftiio.lib;ITKznz.lib;itkzlib.lib;TriangleMesh.lib;geomlib.lib;ANN.lib;tetgen.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)test_triangleMesh.exe</OutputFile>
+      <AdditionalLibraryDirectories>C:\thirdparty\InsightToolkit-3.16.0\binaries_64\bin\release;C:\thirdparty\InsightToolkit-3.16.0\binaries_64\bin;..\..\Libs\GeomLib\x64\Release_md;..\..\Libs\TriangleMesh\x64\Release_md;..\..\Libs\ann_1.1.1\MS_Win32\dll\x64\Release_md;..\..\Libs\tetgen1.4.3\x64\Release_md;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)test_triangleMesh.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\Libs\TriangleMesh;..\..\Libs\GeomLib;..\..\Libs\CLAPACK\includes;..\..\Libs\canonicalForm;..\..\Libs\ann_1.1.1\include;..\..\Libs\tetgen1.4.3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>TriangleMesh.lib;geomlib.lib;clapack.lib;canForm.lib;ANN.lib;tetgen.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)test_triangleMesh.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\Libs\GeomLib\Release;..\..\Libs\CLAPACK\lib;..\..\Libs\TriangleMesh\Release;..\..\Libs\canonicalForm\Release;..\..\Libs\ann_1.1.1\MS_Win32\dll\Release;..\..\Libs\tetgen1.4.3\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\Libs\CLAPACK\includes;..\..\Libs\InsightToolkit-3.16.0\binaries;..\..\Libs\InsightToolkit-3.16.0\Code\Algorithms;..\..\Libs\InsightToolkit-3.16.0\Code\BasicFilters;..\..\Libs\InsightToolkit-3.16.0\Code\Common;..\..\Libs\InsightToolkit-3.16.0\Code\Numerics;..\..\Libs\InsightToolkit-3.16.0\Code\IO;..\..\Libs\InsightToolkit-3.16.0\Code\Numerics\FEM;..\..\Libs\InsightToolkit-3.16.0\Code\Numerics\NeuralNetworks;..\..\Libs\InsightToolkit-3.16.0\Code\SpatialObject;..\..\Libs\InsightToolkit-3.16.0\Utilities\MetaIO;..\..\Libs\InsightToolkit-3.16.0\Utilities\NrrdIO;..\..\Libs\InsightToolkit-3.16.0\binaries\Utilities\NrrdIO;..\..\Libs\InsightToolkit-3.16.0\Utilities\DICOMParser;..\..\Libs\InsightToolkit-3.16.0\binaries\Utilities\DICOMParser;..\..\Libs\InsightToolkit-3.16.0\binaries\Utilities\expat;..\..\Libs\InsightToolkit-3.16.0\Utilities\expat;..\..\Libs\InsightToolkit-3.16.0\Utilities\nifti\niftilib;..\..\Libs\InsightToolkit-3.16.0\Utilities\nifti\znzlib;..\..\Libs\InsightToolkit-3.16.0\Utilities\itkExtHdrs;..\..\Libs\InsightToolkit-3.16.0\binaries\Utilities;..\..\Libs\InsightToolkit-3.16.0\Utilities;..\..\Libs\InsightToolkit-3.16.0\Code\Numerics\Statistics;..\..\Libs\InsightToolkit-3.16.0\Utilities\vxl\v3p\netlib;..\..\Libs\InsightToolkit-3.16.0\Utilities\vxl\vcl;..\..\Libs\InsightToolkit-3.16.0\Utilities\vxl\core;..\..\Libs\InsightToolkit-3.16.0\binaries\Utilities\vxl\v3p\netlib;..\..\Libs\InsightToolkit-3.16.0\binaries\Utilities\vxl\vcl;..\..\Libs\InsightToolkit-3.16.0\binaries\Utilities\vxl\core;..\..\Libs\InsightToolkit-3.16.0\binaries\Utilities\gdcm;..\..\Libs\InsightToolkit-3.16.0\Utilities\gdcm\src;..\..\Libs\TriangleMesh;..\..\Libs\GeomLib;..\..\Libs\ann_1.1.1\include;..\..\Libs\tetgen1.4.3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;ITKAlgorithms.lib;ITKStatistics.lib;ITKFEM.lib;clapack.lib;blas.lib;libF77.lib;itkNetlibSlatec.lib;ITKNumerics.lib;ITKBasicFilters.lib;ITKIO.lib;ITKNrrdIO.lib;itkgdcm.lib;itkjpeg12.lib;itkjpeg16.lib;itkopenjpeg.lib;snmpapi.lib;rpcrt4.lib;itkpng.lib;itktiff.lib;itkjpeg8.lib;ITKSpatialObject.lib;ITKCommon.lib;itkvnl_inst.lib;itkvnl_algo.lib;itkv3p_netlib.lib;itkvnl.lib;itkvcl.lib;ITKMetaIO.lib;itksys.lib;ws2_32.lib;comctl32.lib;wsock32.lib;ITKDICOMParser.lib;ITKEXPAT.lib;ITKniftiio.lib;ITKznz.lib;itkzlib.lib;TriangleMesh.lib;geomlib.lib;ANN.lib;tetgen.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)test_triangleMesh.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\Libs\InsightToolkit-3.16.0\binaries_64\bin\release;..\..\Libs\InsightToolkit-3.16.0\binaries_64\bin;..\..\Libs\GeomLib\x64\Release_md;..\..\Libs\TriangleMesh\x64\Release_md;..\..\Libs\ann_1.1.1\MS_Win32\dll\x64\Release_md;..\..\Libs\tetgen1.4.3\x64\Release_md;..\..\Libs\CLAPACK\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CorrespondSurfaceAndVolumetricTemplate.cpp" />
+    <ClCompile Include="FineFittingTracking.cpp" />
+    <ClCompile Include="FineFittingTrackingLocalFrame.cpp" />
+    <ClCompile Include="LinearFemDeformation.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MdLibrary.cpp" />
+    <ClCompile Include="MeshSimplification.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CorrespondSurfaceAndVolumetricTemplate.h" />
+    <ClInclude Include="FineFittingTracking.h" />
+    <ClInclude Include="FineFittingTrackingLocalFrame.h" />
+    <ClInclude Include="LinearFemDeformation.h" />
+    <ClInclude Include="MdLibrary.h" />
+    <ClInclude Include="MeshSimplification.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

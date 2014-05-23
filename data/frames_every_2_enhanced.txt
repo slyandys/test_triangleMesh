@@ -1,0 +1,13 @@
+data/gipshand_linear00_front_enhanced.ply
+data/gipshand_linear02_front_enhanced.ply
+data/gipshand_linear04_front_enhanced.ply
+data/gipshand_linear06_front_enhanced.ply
+data/gipshand_linear08_front_enhanced.ply
+data/gipshand_linear10_front_enhanced.ply
+data/gipshand_linear12_front_enhanced.ply
+data/gipshand_linear14_front_enhanced.ply
+data/gipshand_linear16_front_enhanced.ply
+data/gipshand_linear18_front_enhanced.ply
+data/gipshand_linear20_front_enhanced.ply
+data/gipshand_linear22_front_enhanced.ply
+data/gipshand_linear24_front_enhanced.ply

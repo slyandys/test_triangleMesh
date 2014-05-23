@@ -1,0 +1,15 @@
+Command line arguments:
+
+data/template.ply data/frames_every_2_enhanced.txt y hand data/contact_point_in_tetrahedral.txt
+
+Parameter settings:
+
+In FineFittingTrackingLocalFrame.h
+
+SIZE_NBHD 3
+
+In main_tracking: do not provide a manual low-res mesh and also do not use any markers.
+
+
+Run main_tracking to get result in "With FEM".
+Run main_tracking_no_fem to get result in "Tracking Only"
